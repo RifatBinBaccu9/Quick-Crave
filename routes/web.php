@@ -1,16 +1,15 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('main-site.pages.home');
-});
-Route::get('/menu', function () {
-    return view('main-site.pages.menu');
-});
-Route::get('/about', function () {
-    return view('main-site.pages.about');
-});
-Route::get('/book', function () {
-    return view('main-site.pages.book');
-});
+Route::get('/', [HomeController::class, 'home']);
+
+Route::get('/menu', [MenuController::class, 'menu']);
+
+Route::get('/about', [AboutController::class, 'about']);
+
+Route::get('/book', [BookController::class, 'book']);
