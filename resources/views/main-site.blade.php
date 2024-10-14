@@ -14,7 +14,6 @@
     <!-- header section strats -->
       @include('main-site.common.heading')
     <!-- end header section -->
-     
 
     <!-- main-site start-->
     @yield('main-site')

@@ -17,13 +17,13 @@
                 <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Menu</a>
+                <a class="nav-link" href="{{url('/menu')}}">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/about')}}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="book.html">Book Table</a>
+                <a class="nav-link" href="book">Book Table</a>
               </li>
             </ul>
             <div class="user_option">
