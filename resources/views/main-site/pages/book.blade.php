@@ -25,20 +25,11 @@
               </div>
               <div>
                 <select name="persons" class="form-control nice-select wide">
-                  <option value="" disabled selected>
+                  <option value="1" disabled selected>
                     How many persons?
                   </option>
-                  <option value="">
+                  <option value="2">
                     2
-                  </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
                   </option>
                 </select>
               </div>
