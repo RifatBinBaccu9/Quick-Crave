@@ -12,18 +12,19 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form action="{{ route('bookPush') }}" method="POST">
+              @csrf
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
+                <input type="text" name="name" class="form-control" placeholder="Your Name" />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
+                <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
+                <input type="text" name="email" class="form-control" placeholder="Your Email" />
               </div>
               <div>
-                <select class="form-control nice-select wide">
+                <select name="persons" class="form-control nice-select wide">
                   <option value="" disabled selected>
                     How many persons?
                   </option>
@@ -42,7 +43,7 @@
                 </select>
               </div>
               <div>
-                <input type="date" class="form-control">
+                <input type="date" name="date" class="form-control">
               </div>
               <div class="btn_box">
                 <button>

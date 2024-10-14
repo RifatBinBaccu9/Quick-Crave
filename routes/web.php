@@ -13,3 +13,4 @@ Route::get('/menu', [MenuController::class, 'menu']);
 Route::get('/about', [AboutController::class, 'about']);
 
 Route::get('/book', [BookController::class, 'book']);
+Route::post('/book/push', [BookController::class, 'bookPush'])->name('bookPush');
