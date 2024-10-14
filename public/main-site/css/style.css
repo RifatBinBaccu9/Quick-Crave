@@ -8,6 +8,7 @@ body {
 
 .layout_padding {
   padding: 90px 0;
+  z-index: 100;
 }
 
 .layout_padding2 {
@@ -904,6 +905,7 @@ a:focus {
   color: #ffffff;
   padding: 75px 0 40px 0;
   text-align: center;
+  z-index: 100;
 }
 
 .footer_section h4 {
