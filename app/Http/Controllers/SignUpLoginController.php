@@ -29,12 +29,17 @@ class SignUpLoginController extends Controller
         return redirect()->route('login');
     }
     
+    // login section
     public function login(){
             return view('main-site.pages.login');
     }
     public function loginCheck(Request $req){
         if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password])){
-            dd('ok');
+            if(Auth::user()->is_type == 'admin'){
+                return redirect()->route('admin');
+            }else{
+                return redirect()->route('home');
+            }
         }else{
             dd('not');
         }
