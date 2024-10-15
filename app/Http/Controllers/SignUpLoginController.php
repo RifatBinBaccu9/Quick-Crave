@@ -28,8 +28,11 @@ class SignUpLoginController extends Controller
         User::create($signupData);
         return redirect()->route('login');
     }
-
-    public function login(Request $req){
+    
+    public function login(){
+            return view('main-site.pages.login');
+    }
+    public function loginCheck(Request $req){
         if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password])){
             dd('ok');
         }else{

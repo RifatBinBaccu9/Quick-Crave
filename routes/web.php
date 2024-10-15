@@ -21,6 +21,7 @@ Route::post('/signup/push', [SignUpLoginController::class, 'signupPush'])->name(
 
 
 Route::get('/login', [SignUpLoginController::class, 'login'])->name('login');
+Route::post('/login/check', [SignUpLoginController::class, 'loginCheck'])->name('loginCheck');
 
 Route::get('/admin', function (){
     return view('admin-site.pages.dashboard');

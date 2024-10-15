@@ -9,8 +9,8 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Log In an account</h2>
 
-              <form>
-
+              <form action="{{route('loginCheck')}}" method="POST">
+                 @csrf
               <div class="form-group mb-4">
                   <label for="form3Example3cg">Your Email</label>
                   <input type="text" name="email" id="form3Example3cg" class=" @error('email') is-invalid @enderror form-control form-control-lg" />
@@ -25,7 +25,7 @@
                   @error('password')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
-                </div>>
+                </div>
 
                 <div class="d-flex justify-content-center">
                   <button type="submit" class="btn btn-success btn-block btn-lg">Register</button>
