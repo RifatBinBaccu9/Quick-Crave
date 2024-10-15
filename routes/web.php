@@ -14,3 +14,7 @@ Route::get('/about', [AboutController::class, 'about']);
 
 Route::get('/book', [BookController::class, 'book']);
 Route::post('/book/push', [BookController::class, 'bookPush'])->name('bookPush');
+
+Route::get('/admin', function (){
+    return view('admin-site.pages.dashboard');
+});
