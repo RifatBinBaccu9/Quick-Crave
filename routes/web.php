@@ -18,3 +18,9 @@ Route::post('/book/push', [BookController::class, 'bookPush'])->name('bookPush')
 Route::get('/admin', function (){
     return view('admin-site.pages.dashboard');
 });
+Route::get('/signup', function (){
+    return view('main-site.pages.signup');
+});
+Route::get('/login', function (){
+    return view('main-site.pages.login');
+});

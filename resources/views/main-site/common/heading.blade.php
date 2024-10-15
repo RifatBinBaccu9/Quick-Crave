@@ -23,9 +23,20 @@
                 <a class="nav-link" href="{{url('/about')}}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="book">Book Table</a>
+                <a class="nav-link" href="{{url('/book')}}">Book Table</a>
               </li>
+             
             </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/signup')}}">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/login')}}">LogIn</a>
+              </li>
+              </ul>
+            </div>
             <div class="user_option">
               <a href="" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
