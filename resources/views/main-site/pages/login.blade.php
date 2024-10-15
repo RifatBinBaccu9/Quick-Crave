@@ -11,18 +11,24 @@
 
               <form>
 
-                <div class="form-group mb-4">
+              <div class="form-group mb-4">
                   <label for="form3Example3cg">Your Email</label>
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input type="text" name="email" id="form3Example3cg" class=" @error('email') is-invalid @enderror form-control form-control-lg" />
+                  @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example4cg">Password</label>
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                </div>
+                  <input type="password" name="password" id="form3Example4cg" class=" @error('password') is-invalid @enderror form-control form-control-lg" />
+                  @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
+                </div>>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success btn-block btn-lg">Register</button>
+                  <button type="submit" class="btn btn-success btn-block btn-lg">Register</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Not a member?  <a href="#!" class="fw-bold text-body"><u>Register here</u></a></p>

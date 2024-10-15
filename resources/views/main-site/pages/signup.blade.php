@@ -14,22 +14,34 @@
 
                 <div class="form-group mb-4">
                   <label for="form3Example1cg">Your Name</label>
-                  <input type="text" name="name" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input type="text" name="name" id="form3Example1cg" class=" @error('name') is-invalid @enderror form-control form-control-lg" />
+                  @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example3cg">Your Email</label>
-                  <input type="text" name="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input type="text" name="email" id="form3Example3cg" class=" @error('email') is-invalid @enderror form-control form-control-lg" />
+                  @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example4cg">Password</label>
-                  <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password" name="password" id="form3Example4cg" class=" @error('password') is-invalid @enderror form-control form-control-lg" />
+                  @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example4cdg">Repeat your password</label>
-                  <input type="password" name="password_confirmation" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <input type="password" name="password_confirmation" id="form3Example4cdg" class=" @error('password_confirmation') is-invalid @enderror form-control form-control-lg" />
+                  @error('password_confirmation')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                 </div>
 
                 <div class="d-flex justify-content-center">
