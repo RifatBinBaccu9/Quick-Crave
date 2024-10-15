@@ -25,9 +25,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/book')}}">Book Table</a>
               </li>
-        
 
-              <li class="nav-item dropdown">
+            </ul>
+
+
+          @if (Auth::user())
+
+<div class="nav-item dropdown">
   <a class="nav-link nav-profile d-flex align-items-center" href="#" data-toggle="dropdown">
     <img src="/admin-site/assets/img/profile-img.jpg" height="40px" alt="Profile" class="rounded-circle">
     <span class="d-none d-md-block dropdown-toggle pl-2">K. Anderson</span>
@@ -44,7 +48,7 @@
     <li>
       <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
         <i class="fa fa-user"></i>
-        <span>My Profile</span>
+        <span class="ml-2">My Profile</span>
       </a>
     </li>
     <li>
@@ -53,34 +57,21 @@
     <li>
       <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
         <i class="fa fa-cog"></i>
-        <span>Account Settings</span>
+        <span class="ml-2">Account Settings</span>
       </a>
     </li>
     <li>
       <hr class="dropdown-divider">
     </li>
     <li>
-      <a class="dropdown-item d-flex align-items-center" href="#">
-        <i class="fa fa-sign-out-alt"></i>
-        <span>Sign Out</span>
+      <a class="dropdown-item d-flex align-items-center" href="{{route('logout')}}">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="ml-2">Sign Out</span>
       </a>
     </li>
   </ul>
   <!-- End Profile Dropdown Items -->
-</li>
-
-            </ul>
-          @if (Auth::user())
-<!--           
-          <div class="user_option">
-            <a href="" class="user_link">
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </a>
-            <a href="" class="order_online">
-              Order Online
-            </a>
-          </div> -->
-            
+</div>
           
           @else
           <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -15,7 +15,7 @@ class SignUpLoginController extends Controller
     public function signupPush(Request $req){
        $req->validate([
         'name'=> 'required',
-        'email' => 'required|email|unique:users,email',
+        'email'=>'required|email:rfc,dns',
         'password'=> 'required',
         'password_confirmation'=> 'required|same:password',
        ]);
@@ -43,5 +43,11 @@ class SignUpLoginController extends Controller
         }else{
             dd('not');
         }
+    }
+
+    // logout section
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('home');
     }
 }
