@@ -9,30 +9,31 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form >
+              <form action="{{route('signupPush')}}" method="POST">
+                @csrf
 
                 <div class="form-group mb-4">
                   <label for="form3Example1cg">Your Name</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input type="text" name="name" id="form3Example1cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example3cg">Your Email</label>
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input type="text" name="email" id="form3Example3cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example4cg">Password</label>
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="form3Example4cdg">Repeat your password</label>
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <input type="password" name="password_confirmation" id="form3Example4cdg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success btn-block btn-lg">Register</button>
+                  <button type="submit" class="btn btn-success btn-block btn-lg">Register</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
