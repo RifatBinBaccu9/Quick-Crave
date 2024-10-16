@@ -2,31 +2,31 @@
 <html lang="en">
 
 <!-- head start -->
-  @include('admin-site.common.head')
+  @include('user-site.common.head')
 <!-- head end -->
 
 <body>
 
   <!-- ======= Header ======= -->
-   @include('admin-site.common.header')
+   @include('user-site.common.header')
   <!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-   @include('admin-site.common.sidebar')
+   @include('user-site.common.sidebar')
   <!-- End Sidebar-->
 
 
-  @yield('admin-site')
+  @yield('user-site')
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-   @include('admin-site.common.footer')
+   @include('user-site.common.footer')
 <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-    @include('admin-site.common.js')
+    @include('user-site.common.js')
 
 </body>
 
