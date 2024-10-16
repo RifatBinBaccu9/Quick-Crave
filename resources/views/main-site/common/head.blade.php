@@ -10,7 +10,7 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="/main-site/images/favicon.png" type="">
 
-  <title> Feane </title>
+  <title> Quick- Crave</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="/main-site/css/bootstrap.css" />
