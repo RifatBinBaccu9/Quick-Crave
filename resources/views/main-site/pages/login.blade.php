@@ -31,7 +31,7 @@
                   <button type="submit" class="btn btn-success btn-block btn-lg">Register</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Not a member?  <a href="#!" class="fw-bold text-body"><u>Register here</u></a></p>
+                <p class="text-center text-muted mt-5 mb-0">Not a member?  <a href="{{route('signup')}}" class="fw-bold text-body"><u>Register here</u></a></p>
 
               </form>
 

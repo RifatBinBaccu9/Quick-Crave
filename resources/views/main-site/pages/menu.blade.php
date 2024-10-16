@@ -717,4 +717,4 @@
 
   <!-- end food section -->
 
-  @endsection
+@endsection

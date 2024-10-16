@@ -20,7 +20,7 @@ Route::get('/book', [BookController::class, 'book']);
 Route::post('/book/push', [BookController::class, 'bookPush'])->name('bookPush');
 
 // signup section
-Route::get('/signup', [SignUpLoginController::class, 'signup']);
+Route::get('/signup', [SignUpLoginController::class, 'signup'])->name('signup');
 Route::post('/signup/push', [SignUpLoginController::class, 'signupPush'])->name('signupPush');
 
 // login section
