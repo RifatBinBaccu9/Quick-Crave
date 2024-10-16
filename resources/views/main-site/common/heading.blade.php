@@ -97,7 +97,7 @@
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex align-items-center" href="#">
+                  <a class="dropdown-item d-flex align-items-center" href="{{route('user')}}">
                     <i class="fa fa-cog"></i>
                     <span class="ml-2">Dashboard</span>
                   </a>
