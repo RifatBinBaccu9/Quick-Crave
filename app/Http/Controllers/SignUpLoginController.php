@@ -34,6 +34,10 @@ class SignUpLoginController extends Controller
             return view('main-site.pages.login');
     }
     public function loginCheck(Request $req){
+            $req->validate([
+            'email'=>'required|email:rfc,dns',
+            'password'=> 'required',
+          ]);
         if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password])){
             if(Auth::user()->is_type == 'admin'){
                 return redirect()->route('admin');
