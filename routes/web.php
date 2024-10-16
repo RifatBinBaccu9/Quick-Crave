@@ -32,3 +32,5 @@ Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 
+
+
