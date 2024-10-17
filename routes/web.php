@@ -31,7 +31,7 @@ Route::post('/login/check', [SignUpLoginController::class, 'loginCheck'])->name(
 Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 
 
-Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
+Route::get('/admin', [AdminController::class, 'admin'])->name('admin')->middleware('admin');
 
 Route::get('/user', [UserController::class, 'user'])->name('user');
 Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
