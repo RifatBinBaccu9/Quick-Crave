@@ -15,4 +15,8 @@ class UserController extends Controller
     public function Userbooking(){
         return view('user-site.pages.bookingList');
     }
+
+    public function UserProfile(){
+        return view('user-site.pages.userProfile');
+    }
 }

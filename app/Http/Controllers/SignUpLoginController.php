@@ -56,13 +56,11 @@ class SignUpLoginController extends Controller
     }
 
     // User Profile section
-    public function UserProfile(){
-        return view('user-site.pages.userProfile');
-    }
     public function UserProfileUpdate(Request $req){
         $user=Auth::user();
+
         $req->validate([
-            'email'=>'email:rfc,dns',
+        'email' => 'email:rfc,dns',
         ]);
         $profileData=[
             'name'=>$req->name,

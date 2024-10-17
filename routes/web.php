@@ -40,6 +40,6 @@ Route::middleware(['user'])->group(function (){
     Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
 
     // User Profile section
-    Route::get('/user/profile', [SignUpLoginController::class, 'UserProfile'])->name('UserProfile');
+    Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('UserProfile');
     Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
 });
