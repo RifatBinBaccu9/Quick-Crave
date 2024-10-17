@@ -30,9 +30,11 @@ Route::post('/login/check', [SignUpLoginController::class, 'loginCheck'])->name(
 // logout section
 Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 
+Route::middleware(['admin'])->group(function (){
+    Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
+});
 
-Route::get('/admin', [AdminController::class, 'admin'])->name('admin')->middleware('admin');
-
-Route::get('/user', [UserController::class, 'user'])->name('user')->middleware('user');
-Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
-
+Route::middleware(['user'])->group(function (){
+    Route::get('/user', [UserController::class, 'user'])->name('user');
+    Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
+});
