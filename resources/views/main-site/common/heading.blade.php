@@ -88,7 +88,7 @@
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <a class="dropdown-item d-flex align-items-center" href="{{route('UserProfile')}}">
                     <i class="fa fa-user"></i>
                     <span class="ml-2">My Profile</span>
                   </a>

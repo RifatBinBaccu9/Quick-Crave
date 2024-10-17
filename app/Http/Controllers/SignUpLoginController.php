@@ -54,4 +54,9 @@ class SignUpLoginController extends Controller
         Auth::logout();
         return redirect()->route('home');
     }
+
+    // User Profile section
+    public function UserProfile(){
+        return view('user-site.pages.userProfile');
+    }
 }

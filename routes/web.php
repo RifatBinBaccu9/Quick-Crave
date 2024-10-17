@@ -36,5 +36,9 @@ Route::middleware(['admin'])->group(function (){
 
 Route::middleware(['user'])->group(function (){
     Route::get('/user', [UserController::class, 'user'])->name('user');
+
     Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
+
+    // User Profile section
+    Route::get('/user/profile', [SignUpLoginController::class, 'UserProfile'])->name('UserProfile');
 });
