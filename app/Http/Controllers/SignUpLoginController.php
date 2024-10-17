@@ -61,6 +61,9 @@ class SignUpLoginController extends Controller
     }
     public function UserProfileUpdate(Request $req){
         $user=Auth::user();
+        $req->validate([
+            'email'=>'email:rfc,dns',
+        ]);
         $profileData=[
             'fullName'=>$req->fullName,
             'about'=>$req->about,
