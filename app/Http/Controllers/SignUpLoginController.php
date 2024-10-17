@@ -65,7 +65,7 @@ class SignUpLoginController extends Controller
             'email'=>'email:rfc,dns',
         ]);
         $profileData=[
-            'fullName'=>$req->fullName,
+            'name'=>$req->name,
             'about'=>$req->about,
             'address'=>$req->address,
             'phone'=>$req->phone,
@@ -75,5 +75,6 @@ class SignUpLoginController extends Controller
             'linkedin'=>$req->linkedin,
         ];
        $user->update($profileData);
+       dd($profileData);
     }
 }
