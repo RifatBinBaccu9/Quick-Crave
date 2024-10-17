@@ -59,4 +59,18 @@ class SignUpLoginController extends Controller
     public function UserProfile(){
         return view('user-site.pages.userProfile');
     }
+    public function UserProfileUpdate(Request $req){
+        $user=Auth::user();
+        $profileData=[
+            'fullName'=>$req->fullName,
+            'about'=>$req->about,
+            'address'=>$req->address,
+            'phone'=>$req->phone,
+            'email'=>$req->email,
+            'twitter'=>$req->twitter,
+            'facebook'=>$req->facebook,
+            'linkedin'=>$req->linkedin,
+        ];
+       $user->update($profileData);
+    }
 }

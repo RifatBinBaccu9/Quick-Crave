@@ -41,4 +41,5 @@ Route::middleware(['user'])->group(function (){
 
     // User Profile section
     Route::get('/user/profile', [SignUpLoginController::class, 'UserProfile'])->name('UserProfile');
+    Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
 });
