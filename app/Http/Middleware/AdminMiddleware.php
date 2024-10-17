@@ -16,14 +16,11 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()){
-           if(Auth::user()->is_type == 'admin'){
+
+           if(Auth::check() && Auth::user()->is_type == 'admin'){
                return $next($request);
            }else{
             return redirect()->route('home');
            }
-        }else{
-            return redirect()->route('home');
         }
-    }
 }
