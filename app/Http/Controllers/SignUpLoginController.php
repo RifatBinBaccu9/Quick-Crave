@@ -73,6 +73,6 @@ class SignUpLoginController extends Controller
             'linkedin'=>$req->linkedin,
         ];
        $user->update($profileData);
-       dd($profileData);
+       return redirect()->back();
     }
 }
