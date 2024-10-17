@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-success btn-block btn-lg">Register</button>
+                  <button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Not a member?  <a href="{{route('signup')}}" class="fw-bold text-body"><u>Register here</u></a></p>
