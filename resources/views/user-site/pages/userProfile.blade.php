@@ -88,16 +88,18 @@
                   <!-- Profile Edit Form -->
                   <form action="{{route('UserProfileUpdate')}}" method="POST">
                     @csrf
-                    {{-- <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                    <div class="row mb-3">
+                      <label for="profilePicture" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                        <img src="{{asset($user->profilePicture)}}" alt="Profile" height="130px" width="200px">
+                        <div class="mt-3" >
+                          
+                          <label  class="p-2" for="profilePicture" style="border: 1px solid rgb(35, 62, 184); background: rebeccapurple; color:#fff; border-radius: 10px;cursor: pointer;">
+                         <input style="font-size: 13px;cursor: pointer;" type="file" id="profilePicture" name="profilePicture" accept="image/*">Uplode Profile Pictuer</label>
+                      
                         </div>
                       </div>
-                    </div> --}}
+                    </div>
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
