@@ -9,10 +9,13 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+// home section
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
+// menu section
 Route::get('/menu', [MenuController::class, 'menu']);
 
+// about section
 Route::get('/about', [AboutController::class, 'about']);
 
 // book section
@@ -30,16 +33,24 @@ Route::post('/login/check', [SignUpLoginController::class, 'loginCheck'])->name(
 // logout section
 Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 
+// Profile update section
+Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
+
+// Admin section
 Route::middleware(['admin'])->group(function (){
+    // Admin dashboard section
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 });
 
+// User section
 Route::middleware(['user'])->group(function (){
-    Route::get('/user', [UserController::class, 'user'])->name('user');
-
-    Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
-
     // User Profile section
     Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('UserProfile');
-    Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
+
+    // User dashboard section
+    Route::get('/user', [UserController::class, 'user'])->name('user');
+    
+    // User booking section
+    Route::get('/user/booking', [UserController::class, 'Userbooking'])->name('Userbooking');
+
 });
