@@ -60,7 +60,7 @@ class SignUpLoginController extends Controller
         $user=Auth::user();
 
         $req->validate([
-        'email' => 'email:rfc,dns',
+        'email' => 'email:rfc,dns|unique:users',
         ]);
         $profileData=[
             'name'=>$req->name,
