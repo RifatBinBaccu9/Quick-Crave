@@ -15,7 +15,7 @@ class SignUpLoginController extends Controller
     public function signupPush(Request $req){
        $req->validate([
         'name'=> 'required',
-        'email'=>'required|email:rfc,dns',
+        'email' => 'required|email:rfc,dns|unique:users,email',
         'password'=> 'required',
         'password_confirmation'=> 'required|same:password',
        ]);
