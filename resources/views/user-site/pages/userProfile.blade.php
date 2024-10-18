@@ -86,7 +86,7 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form action="{{route('UserProfileUpdate')}}" method="POST">
+                  <form action="{{route('UserProfileUpdate')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-3">
                       <label for="profilePicture" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>

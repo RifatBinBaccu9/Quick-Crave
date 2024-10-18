@@ -84,7 +84,7 @@ class SignUpLoginController extends Controller
             
             $image->move(public_path('user-site/assets/img/user-profile'), $imageName);
 
-            $profileData['profilePicture']='user-site/assets/img/user-profile' .$imageName;
+            $profileData['profilePicture']='user-site/assets/img/user-profile/' .$imageName;
         }
        $user->update($profileData);
        return redirect()->back();
