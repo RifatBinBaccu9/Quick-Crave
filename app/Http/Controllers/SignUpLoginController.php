@@ -72,6 +72,20 @@ class SignUpLoginController extends Controller
             'facebook'=>$req->facebook,
             'linkedin'=>$req->linkedin,
         ];
+        
+        if(! is_dir(public_path('user-site/assets/img/user-profile'))){
+            mkdir(public_path('user-site/assets/img/user-profile'), 0777, true);
+        }
+
+        if($req->hasFile('profilePicture')){
+            $image=$req->file('profilePicture');
+            $name=$image->getClientOriginalName();
+            $imageName=time(). '_' .$name;
+            
+            $image->move(public_path('user-site/assets/img/user-profile'), $imageName);
+
+            $profileData['profilePicture']='user-site/assets/img/user-profile' .$imageName;
+        }
        $user->update($profileData);
        return redirect()->back();
     }

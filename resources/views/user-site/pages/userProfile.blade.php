@@ -91,7 +91,7 @@
                     <div class="row mb-3">
                       <label for="profilePicture" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="{{asset($user->profilePicture)}}" alt="Profile" height="130px" width="200px">
+                        {{-- <img src="{{asset($user->profilePicture)}}" alt="Profile" height="130px" width="200px"> --}}
                         <div class="mt-3" >
                           
                           <label  class="p-2" for="profilePicture" style="border: 1px solid rgb(35, 62, 184); background: rebeccapurple; color:#fff; border-radius: 10px;cursor: pointer;">
