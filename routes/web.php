@@ -33,9 +33,10 @@ Route::post('/login/check', [SignUpLoginController::class, 'loginCheck'])->name(
 // logout section
 Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 
-// Profile update section
+// user Profile update section
 Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
 
+// User Password Chenge section
 Route::post('/user/profile/PasswordChenge', [SignUpLoginController::class, 'UserPasswordChenge'])->name('UserPasswordChenge');
 
 // Admin section
