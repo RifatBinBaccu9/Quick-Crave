@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class SignUpLoginController extends Controller
 {
@@ -89,4 +90,34 @@ class SignUpLoginController extends Controller
        $user->update($profileData);
        return redirect()->back();
     }
+
+    // user password chenge section
+    public function UserPasswordChenge(Request $req)
+{
+    // Validation with additional rules
+    $req->validate([
+        'oldpassword' => 'required',
+        'new_password' => 'required|confirmed|min:8|different:oldpassword',
+        'new_password_confirmation' => 'required',
+    ], [
+        'oldpassword.required' => 'Please enter your current password.',
+        'new_password.required' => 'Please enter a new password.',
+        'new_password.confirmed' => 'New password and confirmation do not match.',
+        'new_password.min' => 'New password must be at least 8 characters long.',
+        'new_password.different' => 'The new password should not be the same as the old password.',
+        'new_password_confirmation.required' => 'Please confirm your new password.'
+    ]);
+
+    // Check if the old password matches the current user's password
+    if (Hash::check($req->oldpassword, Auth::user()->password)) {
+        // Update password
+        User::whereId(Auth::user()->id)->update([
+            'password' => Hash::make($req->new_password),
+        ]);
+        return redirect()->back();
+    } else {
+        return redirect()->back();
+    }
+}
+    
 }
