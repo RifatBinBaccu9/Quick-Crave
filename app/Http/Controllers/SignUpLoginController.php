@@ -96,15 +96,15 @@ class SignUpLoginController extends Controller
 {
     // Validation with additional rules
     $req->validate([
-        'oldpassword' => 'required',
-        'new_password' => 'required|confirmed|min:8|different:oldpassword',
+        'oldpassword' => 'required|different:oldpassword',
+        'new_password' => 'required|confirmed|min:8',
         'new_password_confirmation' => 'required',
     ], [
         'oldpassword.required' => 'Please enter your current password.',
         'new_password.required' => 'Please enter a new password.',
         'new_password.confirmed' => 'New password and confirmation do not match.',
         'new_password.min' => 'New password must be at least 8 characters long.',
-        'new_password.different' => 'The new password should not be the same as the old password.',
+        'oldpassword.different' => 'The new password should not be the same as the old password.',
         'new_password_confirmation.required' => 'Please confirm your new password.'
     ]);
 
