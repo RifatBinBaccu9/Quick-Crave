@@ -36,6 +36,8 @@ Route::get('/logout', [SignUpLoginController::class, 'logout'])->name('logout');
 // Profile update section
 Route::post('/user/profile/update', [SignUpLoginController::class, 'UserProfileUpdate'])->name('UserProfileUpdate');
 
+Route::post('/user/profile/PasswordChenge', [SignUpLoginController::class, 'UserPasswordChenge'])->name('UserPasswordChenge');
+
 // Admin section
 Route::middleware(['admin'])->group(function (){
     // Admin dashboard section
