@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {   
     // user section 
     public function user(){
-        return view('user-site.pages.dashboard');
+        $users=Auth::user();
+        return view('user-site.pages.dashboard',[
+            'users'=>$users,
+        ]);
     }
 
     // Userbooking section
@@ -17,6 +21,9 @@ class UserController extends Controller
     }
 
     public function UserProfile(){
-        return view('user-site.pages.userProfile');
+        $users=Auth::user();
+        return view('user-site.pages.userProfile',[
+            'users'=>$users,
+        ]);
     }
 }
