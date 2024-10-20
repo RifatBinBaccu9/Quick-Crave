@@ -9,4 +9,6 @@ class AdminController extends Controller
     public function admin(){
         return view('admin-site.pages.dashboard');
     }
+
+    // 
 }

@@ -41,6 +41,9 @@ Route::post('/user/profile/PasswordChenge', [SignUpLoginController::class, 'User
 
 // Admin section
 Route::middleware(['admin'])->group(function (){
+    // admin profile section
+    Route::get('/admin/profile', [AdminController::class, 'adminProfile'])->name('adminProfile');
+
     // Admin dashboard section
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 });
