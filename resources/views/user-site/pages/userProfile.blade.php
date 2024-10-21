@@ -13,10 +13,10 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section profile">
+    <section class="section profile">  
       <div class="row">
         <div class="col-xl-4">
-
+{{-- card --}}
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
